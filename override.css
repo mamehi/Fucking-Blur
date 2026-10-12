@@ -1,0 +1,23 @@
+/* Fucking Blur：覆盖网页中的模糊效果和文本选择限制。 */
+*, *::before, *::after {
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+}
+
+/* 恢复根元素上的文本选择。 */
+html, body {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+}
+
+/* 让原生文本选区保持可见。 */
+::selection {
+  background: Highlight !important;
+  color: HighlightText !important;
+}
